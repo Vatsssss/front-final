@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Toyota Camry",
+    "image": "./assets/cars/camry.jpeg",
+    "engine": "2.5L I4",
+    "horsePower": 203,
+    "year": 2022
+  },
+  {
+    "id": 2,
+    "name": "BMW 3 Series",
+    "image": "./assets/cars/bmw.jpeg",
+    "engine": "2.0L Turbo I4",
+    "horsePower": 255,
+    "year": 2023
+  },
+  {
+    "id": 3,
+    "name": "Audi A4",
+    "image": "./assets/cars/audi.jpeg",
+    "engine": "2.0L Turbo I4",
+    "horsePower": 201,
+    "year": 2022
+  },
+  {
+    "id": 4,
+    "name": "Mercedes-Benz C-Class",
+    "image": "./assets/cars/mercedez.jpeg",
+    "engine": "2.0L Turbo I4",
+    "horsePower": 255,
+    "year": 2023
+  },
+  {
+    "id": 5,
+    "name": "Honda Accord",
+    "image": "./assets/cars/accord.jpeg",
+    "engine": "1.5L Turbo I4",
+    "horsePower": 192,
+    "year": 2022
+  },
+  {
+    "id": 6,
+    "name": "Kia Stinger",
+    "image": "./assets/cars/stinger.jpeg",
+    "engine": "3.3L V6 Twin Turbo",
+    "horsePower": 365,
+    "year": 2023
+  }
+]

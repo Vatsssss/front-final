@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="./compontents/navbar.js" defer></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rental</title>
+
+    <!-- Link to external CSS file (optional) -->
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./compontents/navbar.css" />
+    <script>
+      fetch("./data.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const container = document.getElementById("cards-container");
+          container.innerHTML = data
+            .slice(0, 3)
+            .map(
+              (car) =>
+                `<div class="card">
+            <img src="${car.image}" alt="car image" class="card_image" />
+            <div class="card_body">
+              <h2 class="card_title">${car.name}</h2>
+              <div class="card_details">
+                <div class="row">
+                  <p>Enginge</p>
+                  <p>${car.engine}</p>
+                </div>
+                <div class="row">
+                  <p>Horse Power</p>
+                  <p>${car.horsePower}</p>
+                </div>
+                <div class="row">
+                  <p>Year</p>
+                  <p>${car.year}</p>
+                </div>
+              </div>
+              <a href="./cars.html" class="button">Rent Now</a>
+            </div>
+          </div>`,
+            )
+            .join("");
+        });
+    </script>
+  </head>
+  <body>
+    <div id="navbar-container"></div>
+    <div class="content">
+      <div class="hero">
+        <h1>Rent Smart. Drive Easy.</h1>
+        <h4>
+          Book your perfect car in minutes and hit the road without stress.
+        </h4>
+        <a class="button" href="./cars.html">Book Now</a>
+      </div>
+
+      <div class="about-us">
+        <h1 class="title">About Us</h1>
+        <p>
+          We offer high-quality car rentals designed for people who value
+          comfort and reliability. Every vehicle in our fleet is carefully
+          inspected to meet our standards of safety and performance. Our mission
+          is to deliver a smooth rental experience — from easy booking to
+          dependable customer service — so you can focus on the road ahead.
+        </p>
+        <a class="button" href="./about.html">Read More</a>
+      </div>
+
+      <section>
+        <h1 class="title">Our Cars</h1>
+        <div class="cards-container" id="cards-container">
+          <div class="card">
+            <img src="./assets/rs.png" alt="car image" class="card_image" />
+            <div class="card_body">
+              <h2 class="card_title">AUDI RS 6</h2>
+              <div class="card_details">
+                <div class="row">
+                  <p>Enginge</p>
+                  <p>4.0</p>
+                </div>
+                <div class="row">
+                  <p>Horse Power</p>
+                  <p>400</p>
+                </div>
+                <div class="row">
+                  <p>Year</p>
+                  <p>2016</p>
+                </div>
+              </div>
+              <a class="button" href="./cars.html">Rent Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/rs.png" alt="car image" class="card_image" />
+            <div class="card_body">
+              <h2 class="card_title">AUDI RS 6</h2>
+              <div class="card_details">
+                <div class="row">
+                  <p>Enginge</p>
+                  <p>4.0</p>
+                </div>
+                <div class="row">
+                  <p>Horse Power</p>
+                  <p>400</p>
+                </div>
+                <div class="row">
+                  <p>Year</p>
+                  <p>2016</p>
+                </div>
+              </div>
+              <a class="button" href="./cars.html">Rent Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="./assets/rs.png" alt="car image" class="card_image" />
+            <div class="card_body">
+              <h2 class="card_title">AUDI RS 6</h2>
+              <div class="card_details">
+                <div class="row">
+                  <p>Enginge</p>
+                  <p>4.0</p>
+                </div>
+                <div class="row">
+                  <p>Horse Power</p>
+                  <p>400</p>
+                </div>
+                <div class="row">
+                  <p>Year</p>
+                  <p>2016</p>
+                </div>
+              </div>
+              <a class="button" href="./cars.html">Rent Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rental</title>
+    <script src="./compontents/navbar.js" defer></script>
+    <script>
+      fetch("./data.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const container = document.getElementById("our-cars-container");
+          container.innerHTML = data
+            .map(
+              (car) =>
+                `<div class="card">
+            <img src="${car.image}" alt="car image" class="card_image" />
+            <div class="card_body">
+              <h2 class="card_title">${car.name}</h2>
+              <div class="card_details">
+                <div class="row">
+                  <p>Enginge</p>
+                  <p>${car.engine}</p>
+                </div>
+                <div class="row">
+                  <p>Horse Power</p>
+                  <p>${car.horsePower}</p>
+                </div>
+                <div class="row">
+                  <p>Year</p>
+                  <p>${car.year}</p>
+                </div>
+              </div>
+              <a href="./cars.html" class="button">Rent Now</a>
+            </div>
+          </div>`,
+            )
+            .join("");
+        });
+    </script>
+    <!-- Link to external CSS file (optional) -->
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./compontents/navbar.css" />
+  </head>
+  <body>
+    <div id="navbar-container"></div>
+
+    <div class="content headermargin">
+      <section>
+        <h1 class="title">Our Cars</h1>
+        <div class="cars-page" id="our-cars-container"></div>
+      </section>
+    </div>
+  </body>
+</html>
